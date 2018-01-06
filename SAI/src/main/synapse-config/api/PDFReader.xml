@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/readfiles" name="PDFReader" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/filename/{name}/type/{type}">
+        <inSequence>
+            <property expression="get-property('uri.var.name')" name="fileName" scope="default" type="STRING"/>
+            <property expression="get-property('uri.var.type')" name="fileType" scope="default" type="STRING"/>
+            <property expression="get-property('registry','gov:/saiconfigs/filelocation')" name="fileLocation" scope="default" type="STRING"/>
+            <class name="com.sai.pdf.PdfReader"/>
+            <payloadFactory media-type="json">
+                <format>            "PDFTEXT":{"value":"$1"}      </format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('pdfContent')"/>
+                </args>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
