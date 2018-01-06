@@ -15,3 +15,4 @@ For example - /Users/roshanwijesena/Documents/sai/files
 For example, http://192.168.1.5:8280/readfiles/filename/textonly/type/zip
 
 If your file is a ZIP file it will automatically extract to the folder location and read the content of the PDF and send the response as post body.
+![alt text](https://github.com/rswijesena/pdfreader/blob/master/api-sample.png)
