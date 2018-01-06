@@ -9,6 +9,7 @@ How to install.
 
 4. Add folder location as a configuration file  /_system/governance/saiconfigs/filelocation to the wso2carbon registry.
 For example - /Users/roshanwijesena/Documents/sai/files
+![alt text](https://github.com/rswijesena/pdfreader/blob/master/config.png)
 
 5. Invoke the API. http://192.168.1.5:8280/readfiles/filename/{filename}/type/{fileType} 
 
